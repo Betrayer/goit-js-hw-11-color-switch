@@ -10,7 +10,7 @@ const colors = [
 ];
 
 const min = 0;
-const max = colors.length;
+const max = colors.length -1;
 const startButt = document.querySelector('button[data-action="start"]');
 const stopButt = document.querySelector('button[data-action="stop"]');
 let timerId = null;
