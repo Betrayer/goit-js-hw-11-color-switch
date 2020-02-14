@@ -22,14 +22,16 @@ function changeBackground(color) {
   document.body.style.background = color;
 }
 
-startButt.addEventListener("click", () => {
+startButt.addEventListener("click", start)
+function start (e) {
   timerId = setInterval(() => {
     changeBackground(colors[randomIntegerFromInterval(min, max)]);
   }, 1000);
   startButt.disabled = true;
-});
+};
 
-stopButt.addEventListener("click", () => {
+stopButt.addEventListener("click", stop)
+function stop (e) {
   clearInterval(timerId);
   startButt.disabled = false;
-});
+};
